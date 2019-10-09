@@ -1,53 +1,38 @@
 //STEP 1
 function halfNumber(number){
     "use strict";
-    
-    window.console.log("Half of "+ number +" is "+ (number/2) +" ." +"<br>");   
+    window.console.log("Half of "+ number +" is "+ (number/2) +" ." +"\n");   
 }
 //STEP 2
 function squareNumber(number){
-    "use strict";
-    
-    window.console.log("The result of squaring "+ number +" is "+ (number*number) +" ." +"<br>");   
+    "use strict";   
+    window.console.log("The result of squaring "+ number +" is "+ (number*number) +" ." +"\n");   
 }
 //STEP 3
 function percentOf(x,y){
     "use strict";
     var r=(y*100)/x;
-    window.console.log( x +" is "+ r +" % of " + y+ ". <br>");   
+    window.console.log( x +" is "+ r +" % of " + y+ ". \n");   
 }
 
 //STEP 4
 function findModulus(x,y){
     "use strict";
-    window.console.log( (y%x) +" is the modulus of "+ x + " and "+ y + ". <br>");   
+    window.console.log( (y%x) +" is the modulus of "+ x + " and "+ y + ". \n");   
 }
 
 //STEP 5
-// function add(number_Array){
-//     while(true){
-//         var n= window.prompt("write number you want to add or write 'sum' if you want to find out the sum of the submitted numbers.");
-//         if (typeof(n)=== 'number'){
-//             number_Array.push(n);      
-//         }else if (n === 'sum'){
-//             var s= sum(number_Array);
-//             // document.write("sum of the numbers are"+ s );
-//             document.write(number_Array);
-//             break;
-//         }
-//         // else {
-//         //     document.alert("invalid input!!")
-//         // }
+function sum(numbers) {
+    var sum =0;
+    for (i = 0; i < numbers.length; i += 1) {
+        sum += parseInt(numbers[i]);
+    }
+    window.console.log("Sum of all the numbers ("+numbers+") are :"+ sum);
+}
+function addNumber() {
 
-//     }
-    
-// }
-function sum(number_Array){
-    var sum=0;
-    number_Array.forEach(function (number) {
-        sum +=number;
-    });
-    return sum;
+    var number = window.prompt("Enter Numbers!!!").split(",");
+    sum(number);
 }
 
 
@@ -56,18 +41,15 @@ function sum(number_Array){
 function main(){
     "use strict";
     // var number = window.prompt("Enter the number for function halfNumber()");
-    // halfNumber(number);
+    halfNumber(5);
     // var number= window.prompt("Enter the number for function squareNumber()");
-    // squareNumber(number);
+    squareNumber(3);
     // var x= window.prompt("Enter the first number for function percentOf()");
     // var y= window.prompt("Enter the second number for function percentOf()");
-    // percentOf(x,y);
+    percentOf(2,4);
     // var x= window.prompt("Enter the first number for function findModulus()");
     // var y= window.prompt("Enter the second number for function findModulus()");
-    // findModulus(x,y);
-    // var number_Array=[];
-    // add(number_Array);
-    
-    
+    findModulus(2,4);
+    addNumber();      
 }
 main();
