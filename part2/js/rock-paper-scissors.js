@@ -42,21 +42,23 @@ function check(x,y){
 
 function main(){
     "use strict";
-    uChoice=window.prompt("Pick any one from 'rock','paper' or 'scissor'");
+    while(true){
+        uChoice=window.prompt("Pick any one from 'rock','paper' or 'scissor'");
 
-    if( !(uChoice == "paper" || uChoice == "rock" || uChoice=="scissor")){
-        window.alert("Invalid Input !!!");
-    }
-    else {
-        var c=Math.round((Math.random()*10))%3;
-        if (c === 0){
-            cChoice="rock";
-        }else if (c ===1){
-            cChoice="paper";
-        }else if(c===2){
-            cChoice="scissor";
+        if( !(uChoice == "paper" || uChoice == "rock" || uChoice=="scissor")){
+            window.alert("Invalid Input !!!");
         }
-        check(uChoice,cChoice);
-    }
+        else {
+            var c=Math.round((Math.random()*10))%3;
+            if (c === 0){
+                cChoice="rock";
+            }else if (c ===1){
+                cChoice="paper";
+            }else if(c===2){
+                cChoice="scissor";
+            }
+            check(uChoice,cChoice);
+        }
+    }   
 }
 main();
