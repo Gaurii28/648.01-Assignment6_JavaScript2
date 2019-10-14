@@ -49,7 +49,7 @@ function main(){
     percentOf(2,4);
     // var x= window.prompt("Enter the first number for function findModulus()");
     // var y= window.prompt("Enter the second number for function findModulus()");
-    findModulus(2,4);
+    findModulus(4,10);
     addNumber();      
 }
 main();

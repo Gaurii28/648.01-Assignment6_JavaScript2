@@ -89,16 +89,15 @@ movies[3]="Safe Haven";
 movies[4]="The Lucky One";
 movies[5]="Notebook";
 movies[6]="Social Networking";
+movies=movies.join("\n");
 
 leastFavMovies=["The Crush","Gone Girl","Insidious"];
+leastFavMovies=leastFavMovies.join("\n");
 window.console.log("Movies i like:  \n ");
-for(var i =0 ; i<movies.length; i ++){
-    window.console.log(movies[i] + "\n");
-}
+window.console.log(movies);
 window.console.log(" \n Movies i regret watching:  \n ");
-for(var i =0 ; i<leastFavMovies.length; i ++){
-    window.console.log(leastFavMovies[i] + "\n");
-}
+window.console.log(leastFavMovies);
+
 //STEP 9
 window.console.log("\n STEP 9");
 var movies = [];
@@ -113,10 +112,7 @@ movies[6]="Social Networking";
 leastFavMovies=["The Crush","Gone Girl","Insidious"];
 
 movies = movies.concat(leastFavMovies);
-movies.sort();
-for(var i= movies.length-1 ; i>=0;i--){
-    window.console.log(movies[i] + "\n");
-}
+window.console.log(movies.sort().reverse());
 
 //STEP 10
 window.console.log("\n STEP 10");
@@ -132,12 +128,6 @@ movies[6]="Social Networking";
 leastFavMovies=["The Crush","Gone Girl","Insidious"];
 
 movies = movies.concat(leastFavMovies);
-movies.sort();
-for(var i=movies.length-1 ; i>=0;i--){
-    window.console.log(movies[i] + "\n");
-}
-window.console.log("last item in array is :"+ movies[movies.length-1] + "\n");
-movies.length=movies.length-1;
-
+window.console.log("last movie: " +movies[movies.length-1]);
 
 

@@ -1,32 +1,39 @@
-/*eslint-env browser*/
+// /*eslint-env browser*/
 var e;
-//STEP 1
+// // STEP 1
 function writeMessage(){
-    window.alert("I have been clicked!!!");
+    "use strict";
+    window.alert("Step 1: I have been clicked!!!");
 }
-//STEP 2
-var b=document.getElementById("myButton1");
-b.onclick = function(){
-    window.alert("I have been clicked!!!");
-}
+// //STEP 2
+
+var mybutton = window.document.getElementById("button2");
+mybutton.onclick = function(){
+    "use strict";
+    window.alert("Step 2 : I have been clicked!!!");
+};
 
 
-//STEP 3
-
-myButton.addEventListener("click", writeMessage);
+// //STEP 3
+var button3 = window.document.getElementById("button3");
 function writeMessage(){
-    window.alert("I have been clicked!!!");
-}   
+    window.alert("Step 3 : I have been clicked!!!");
+}
+button3.addEventListener("click", writeMessage);   
 
-//STEP 4
-myButton2.addEventListener("click",function(){
-    window.alert("I have been clicked!!!");
+// //STEP 4
+var button4 = window.document.getElementById("button3");
+button4.addEventListener("click",function(){
+    window.alert("Step 4 : I have been clicked!!!");
 });
+
 //STEP 5
+
 window.addEventListener("load", function () {
     "use strict";
-    myButton3.addEventListener("click",function(){
-        window.alert("I have been clicked!!!");
+    var button5 = window.document.getElementById("button3");
+    button5.addEventListener("click",function(){
+        window.alert("Step 5: I have been clicked!!!");
     });
 });
 
