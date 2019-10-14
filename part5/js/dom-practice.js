@@ -16,10 +16,10 @@ mybutton.onclick = function(){
 
 // //STEP 3
 var button3 = window.document.getElementById("button3");
-function writeMessage(){
+function writeMessage1(){
     window.alert("Step 3 : I have been clicked!!!");
 }
-button3.addEventListener("click", writeMessage);   
+button3.addEventListener("click", writeMessage1);   
 
 // //STEP 4
 var button4 = window.document.getElementById("button3");
